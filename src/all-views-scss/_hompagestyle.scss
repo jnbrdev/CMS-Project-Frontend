@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Titillium Web", sans-serif;
+}
+
+:root {
+	--mainColor: #fff;
+	--mainColorLight: #2E75B6;
+	--secondaryColor: #303C54;
+	--textColor: #eee;
+}
+
+.home-header-menu-logo {
+	display: flex;
+    height: 65px;
+    margin-top: 3px;
+    margin-right: 530px;
+}
+
+.home-header-menu {
+	display: flex;
+	align-items: center;
+	justify-content: right;
+	height: 80px;
+	padding: 0 2rem;
+	background-color: var(--mainColor);
+	color: var(--textColor);
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
+}
+
+.footer {
+    --cui-footer-min-height: 3rem;
+    --cui-footer-padding-x: 1rem;
+    --cui-footer-padding-y: 0.5rem;
+    --cui-footer-color: rgba(44, 56, 74, 0.95);
+    --cui-footer-bg: #303C54;
+    --cui-footer-border-color: #d8dbe0;
+    --cui-footer-border: 1px solid var(--cui-footer-border-color);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    min-height: var(--cui-footer-min-height);
+    padding: var(--cui-footer-padding-y) var(--cui-footer-padding-x);
+    color: var(--cui-footer-color);
+    background: var(--cui-footer-bg);
+    border-top: var(--cui-footer-border);
+}
+
+// .footer h4 {
+//   font-size: 35px;
+//   text-align: center;
+// }
+
+
+nav a {
+    margin: 0 1rem;
+    color: #2E75B6;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+nav a:hover {
+	color: var(--secondaryColor);
+}
+
+.home-header-menu .home-nav-btn {
+	padding: 5px;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: var(--textColor);
+	visibility: hidden;
+	opacity: 0;
+	font-size: 1.8rem;
+}
+
+.home-header-menu div,
+nav {
+	display: flex;
+	align-items: center;
+}
+
+.home-body {
+    min-height: 533px;
+	background-image: url(../all-views-images/bglog.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home-body h1 {
+	font-size: 75px;
+    background: transparent;
+    display: flex;
+    position: absolute;
+    color: white;
+    font-family: fantasy;
+	margin-top: 150px;
+    margin-left: 110px;
+}
+
+@media only screen and (max-width: 1024px) {
+	.home-header-menu .home-nav-btn {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.home-header-menu nav {
+		position: fixed;
+		top: -100vh;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+		background-color: var(--mainColor);
+		transition: 1s;
+	}
+
+	.home-header-menu .home-responsive_nav {
+		transform: translateY(100vh);
+	}
+
+	nav .nav-close-btn {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+	}
+
+	nav a {
+		font-size: 1.5rem;
+	}
+}
